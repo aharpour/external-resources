@@ -3,7 +3,7 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>frontend:plugincluster</sv:value>
   </sv:property>
-  <sv:property sv:name="frontend:services" sv:type="String">
+  <sv:property sv:name="frontend:services" sv:type="String" sv:multiple="true">
     <sv:value>wicket.id</sv:value>
     <sv:value>wicket.model</sv:value>
     <sv:value>model.folder</sv:value>
@@ -18,9 +18,6 @@
     <sv:property sv:name="browser.viewers" sv:type="String">
       <sv:value>cms-folder-views</sv:value>
     </sv:property>
-    <sv:property sv:name="extension.breadcrumb" sv:type="String">
-      <sv:value>service.dialog.breadcrumb</sv:value>
-    </sv:property>
     <sv:property sv:name="extension.list" sv:type="String">
       <sv:value>service.dialog.list</sv:value>
     </sv:property>
@@ -29,9 +26,6 @@
     </sv:property>
     <sv:property sv:name="model.document" sv:type="String">
       <sv:value>${wicket.model}</sv:value>
-    </sv:property>
-    <sv:property sv:name="model.folder" sv:type="String">
-      <sv:value>${model.folder}</sv:value>
     </sv:property>
     <sv:property sv:name="plugin.class" sv:type="String">
       <sv:value>org.hippoecm.frontend.plugins.cms.browse.Navigator</sv:value>
@@ -45,11 +39,8 @@
     <sv:property sv:name="sections" sv:type="String">
       <sv:value>section.videos</sv:value>
     </sv:property>
-    <sv:property sv:name="wicket.extensions" sv:type="String">
-      <sv:value>extension.breadcrumb</sv:value>
-    </sv:property>
-    <sv:property sv:name="wicket.id" sv:type="String">
-      <sv:value>${wicket.id}</sv:value>
+    <sv:property sv:name="wicket.variant" sv:type="String">
+      <sv:value>picker</sv:value>
     </sv:property>
     <sv:node sv:name="browser.options">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -77,32 +68,12 @@
       </sv:property>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="dialogBreadcrumbPlugin">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>frontend:plugin</sv:value>
-    </sv:property>
-    <sv:property sv:name="model.folder" sv:type="String">
-      <sv:value>${model.folder}</sv:value>
-    </sv:property>
-    <sv:property sv:name="plugin.class" sv:type="String">
-      <sv:value>org.hippoecm.frontend.plugins.standards.browse.BreadcrumbPlugin</sv:value>
-    </sv:property>
-    <sv:property sv:name="root.paths" sv:type="String">
-      <sv:value>/content/videos</sv:value>
-    </sv:property>
-    <sv:property sv:name="translator.id" sv:type="String">
-      <sv:value>service.translator.config</sv:value>
-    </sv:property>
-    <sv:property sv:name="wicket.id" sv:type="String">
-      <sv:value>service.dialog.breadcrumb</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="videosTreeLoader">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:plugin</sv:value>
     </sv:property>
     <sv:property sv:name="cluster.name" sv:type="String">
-      <sv:value>cms-tree-views/videos</sv:value>
+      <sv:value>cms-tree-views/videos-picker</sv:value>
     </sv:property>
     <sv:property sv:name="plugin.class" sv:type="String">
       <sv:value>org.hippoecm.frontend.plugin.loader.PluginClusterLoader</sv:value>
